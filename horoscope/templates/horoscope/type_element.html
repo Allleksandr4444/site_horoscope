@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Знаки элемента</title>
+</head>
+<body>
+    {% if description_element == None %}
+        <h2>Такой стихии, как {{ element|title }} не существует </h2>
+    {% else %}
+        <ul>
+            {% for i in description_element %}
+                <li><a href="{% url 'horoscope-name' sign_zodiac=i%}">{{ i|title }}</a></li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>

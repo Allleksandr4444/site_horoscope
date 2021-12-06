@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Стихии</title>
+</head>
+<body>
+    <ul>
+        {% for type in types %}
+            <li><a href="{% url 'element-name' element=type%}">{{ type|title }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
